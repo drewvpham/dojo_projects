@@ -1,9 +1,9 @@
 <img src=<%=@user.image%> alt="Profile picture" height="150" width="150"><br>
 
-<%=@user.username%><br>
-<%=@user.name%><br>
+Username: <%=@user.username%><br>
+Name: <%=@user.name%><br>
 Github: <a href=<%=@user.github%>><%=@user.github%></a><br>
-<%@user.location%><br>
+Location: <%@user.location%><br>
 
 <%=link_to 'Edit Profile', edit_user_path(@user)%>
-<%= link_to 'Destroy',  { action: :destroy, id: @user.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Delete Account',  { action: :destroy, id: @user.id }, method: :delete, data: { confirm: 'Are you sure?' } %>

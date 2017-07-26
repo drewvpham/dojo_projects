@@ -17,6 +17,10 @@ body{
 
 }
 
+img{
+  border-radius: 6px;
+}
+
 /*.navbar li */
 a{
       color: #777;
