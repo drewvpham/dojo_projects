@@ -1,0 +1,33 @@
+
+<a href="/sessions/logout">Logout</a>
+
+
+<h1>Edit your profile</h1>
+<%= form_for(@user) do |f| %>
+
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :email %><br>
+  <%= f.text_field :email %><br>
+
+  <%= f.label :location %><br>
+  <%= f.text_field :location %><br>
+
+  <%= f.label :image_Link %><br>
+  <%= f.text_field :image %><br>
+
+  <%= f.label :github %><br>
+  <%= f.text_field :github %><br>
+
+  <%=f.submit%>
+<% end %>
+
+<% if flash[:errors]%>
+    <%flash[:errors].each do |error|%>
+    <p><%=error%></p>
+  <%end%>
+<%end%>

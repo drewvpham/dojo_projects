@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>DojoProjects</title>
-    <%= csrf_meta_tags %>
+<html ng-app="Dojo Projects">
+<head>
+  <title>Dojo Projects</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
+<body>
+<div class="flatback">
+  <%= render 'layouts/navigation' %>
+  <%= yield %>
 
-  <body>
-    <%= yield %>
-  </body>
+<footer class="footer_center">
+  <small>&copy; 2017 Developed by <a href="http://www.github.com/drewvpham">Drew Pham</a> for fellow <a href="http://www.codingdojo.com" target="_blank">Coding Dojo</a> students</small>
+</footer>
+
+
+</body>
 </html>

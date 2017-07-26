@@ -1,0 +1,21 @@
+<h1>Add New Project</h1>
+
+<%= form_for(@project) do |f| %>
+
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br>
+
+  <label>Github Repo</label><br>
+  <%= f.text_field :github %><br>
+
+  <label>Site URL</label><br>
+  <%= f.text_field :url %><br>
+
+  <label>YoutubeURL</label><br>
+  <%= f.text_field :youtube %><br>
+
+
+
+
+  <%=f.submit%>
+<% end %>
