@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
   before_action :current_user
-  before_action :user_logged_in, only: [:new]
+  before_action :user_authorized
 
   def new
   end
 
   def show
     @user=User.find(current_user)
-
-
+    @projects=@user.projects
   end
 
   def index
@@ -30,7 +29,7 @@ class UsersController < ApplicationController
       reset_session
       flash[:success] = "User deleted"
       redirect_to :root
-    end
+  end
 
     private
     def user_params

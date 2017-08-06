@@ -1,3 +1,16 @@
+<div class='navbar-default'>
+  <ul id='nav'>
+    <li><%=link_to 'Logout', sessions_logout_path, :class=>'inline' %></li>
+    <li><%=link_to 'Your Profile', user_path(current_user.id), :class=>'inline'%></li>
+      <li><%=link_to 'Submit Project', new_project_path, :class=>'inline' %></li>
+    <li><%= link_to 'All Projects', projects_path, :class=>'inline'%></li>
+    <li><%= link_to 'Students', users_path, :class=>'inline'%></li>
+    <li><%=link_to 'DojoProjects', about_path, :class=>'left' %></li>
+  </ul>
+
+</div>
+
+
 <h1>Add New Project</h1>
 
 <%= form_for(@project) do |f| %>
@@ -5,20 +18,17 @@
   <%= f.label :title %><br>
   <%= f.text_field :title %><br>
 
-  <label>Github Repo</label><br>
+  <%= f.label(:github, 'Github Repo')%><br>
   <%= f.text_field :github %><br>
 
-  <label>Site URL</label><br>
+  <%= f.label(:url, 'Site URL')%><br>
   <%= f.text_field :url %><br>
 
-  <label>Youtube URL</label><br>
+  <%= f.label(:youtube, 'Youtube URL')%><br>
   <%= f.text_field :youtube %><br>
 
   <%= f.label :description %><br>
-  <%= f.text_field :description %><br>
-
-
-
+  <%= f.text_area :description, :rows=>"10"%><br>
 
   <%=f.submit%>
 <% end %>

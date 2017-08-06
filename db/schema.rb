@@ -47,11 +47,13 @@ ActiveRecord::Schema.define(version: 20170725162806) do
     t.string   "url"
     t.string   "youtube"
     t.string   "duration"
+    t.string   "dojo_location"
+    t.text     "description"
     t.string   "embed"
     t.string   "video_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

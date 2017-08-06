@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, :path => "students"
   resources :projects
   root 'home#index'
   get '/auth/:provider/callback' => 'sessions#create'

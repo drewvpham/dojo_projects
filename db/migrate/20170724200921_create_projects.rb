@@ -6,6 +6,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.string :url
       t.string :youtube
       t.string :duration
+      t.string :dojo_location
       t.text :description
       t.string :embed
       t.string :video_id
