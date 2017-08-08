@@ -11,7 +11,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.string :embed
       t.string :video_id
       t.references :user, foreign_key: true
-
+    
       t.timestamps
     end
   end

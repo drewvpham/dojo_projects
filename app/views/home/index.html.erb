@@ -2,21 +2,17 @@
   <ul id='nav'>
     <li><%=link_to 'Logout', sessions_logout_path, :class=>'inline' %></li>
     <li><%=link_to 'Your Profile', users_path, :class=>'inline'%></li>
-      <li><%=link_to 'Submit Project', new_project_path, :class=>'inline' %></li>
+    <li><%=link_to 'Submit Project', new_project_path, :class=>'inline' %></li>
     <li><%= link_to 'All Projects', projects_path, :class=>'inline'%></li>
     <li><%= link_to 'Students', users_path, :class=>'inline'%></li>
-      <li><%=link_to 'DojoProjects', about_path, :class=>'left' %></li>
+    <li><%=link_to 'DojoProjects', about_path, :class=>'left' %></li>
   </ul>
-
 </div>
 
 <header class="main-header">
   <div class="title">
     <h1 class="header-h1">Welcome to Dojo Projects!</h1>
     <h4 class="header-h4">A community maintained, one-stop shop for all Coding Dojo student projects and portfolios</h4>
-    <br>
-    <%= button_to('You must be signed in to view and upload projects', '/auth/github', :class=>'btn') %>
-
+    <br><%= button_to('You must be signed in to view and upload projects', '/auth/github', :class=>'btn') %></br>
   </div>
-
 </header>

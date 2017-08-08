@@ -6,9 +6,13 @@ git_source(:github) do |repo_name|
 end
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-
+gem 'sprockets'
+gem 'paperclip'
+gem 'kaminari'
+gem 'activeadmin', github: 'activeadmin'
+gem 'rails-footnotes'
 gem 'yt'
-gem 'bootstrap-sass'
+
 gem "font-awesome-rails"
 gem 'dotenv-rails'
 gem 'omniauth-github'

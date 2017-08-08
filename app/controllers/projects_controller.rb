@@ -22,14 +22,13 @@ class ProjectsController < ApplicationController
 
 
   def index
-    @projects=Project.all
-
+    @projects=Project.order(created_at: :desc).page(params[:page])
+  end
   end
 
 
   def edit
     @project=Project.find(params[:id])
-
   end
 
   def update

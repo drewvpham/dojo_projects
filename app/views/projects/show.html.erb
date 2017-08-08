@@ -9,5 +9,17 @@
   </ul>
 
 </div>
-<h1> <%=@project.title%></h1>
-<h3>Created by: <img src=<%=@user.image%> alt="Profile picture" class='user_avatar'> <%=@user.name%>
+
+<div>
+  <h1> <%=@project.title%></h1>
+  <h3>Created by: <img src=<%=@user.image%> alt="Profile picture" class='user_avatar'> <%=@user.name%>
+  <%if @project.user==current_user%>
+  <%= link_to 'Delete Project',  { action: :destroy, id: @project.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%end%>
+
+  <%=@project.description%>
+  <%=@project.url%>
+  <%=@project.github%>
+  <%=@project.youtube%>
+  <%=@project.created_at.strftime("%B %d, %Y")%>
+</div>

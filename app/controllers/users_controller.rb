@@ -24,6 +24,7 @@ class UsersController < ApplicationController
     @user.update(user_params)
     redirect_to projects_path
   end
+  
   def destroy
       User.find(current_user).destroy
       reset_session

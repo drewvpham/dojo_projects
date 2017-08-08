@@ -12,9 +12,8 @@
 
 
 <img src=<%=@user.image%> alt="Profile picture" height="150" width="150"><br>
-
-Username: <%=@user.username%><br>
 Name: <%=@user.name%><br>
+Username: <%=@user.username%><br>
 Github: <a href=<%=@user.github%>><%=@user.github%></a><br>
 Location: <%=@user.location%><br>
 
@@ -23,7 +22,8 @@ Location: <%=@user.location%><br>
 
 
 <%@projects.each do |project|%>
-
+  <div class='card'>
+    <iframe width="1024" height="768" src="<%=project.url%>" style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);"></iframe>
   <%=project.github%>
-
+</div>
 <%end%>
